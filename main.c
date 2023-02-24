@@ -57,7 +57,7 @@
 #include "cy_retarget_io.h"
 
 /*Priority for button interrupts*/
-#define BTN_IRQ_PRIORITY		5
+#define BTN_IRQ_PRIORITY		0
 
 /*Function prototypes used for this demo.*/
 void handle_error(void);
@@ -85,8 +85,6 @@ int main(void)
     {
     	handle_error();
     }
-
-    __enable_irq();
 
     /*Initialize LEDs*/
     result = cyhal_gpio_init( USER_LED_GREEN, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, CYBSP_LED_STATE_OFF);
@@ -116,6 +114,8 @@ int main(void)
     {
         handle_error();
     }
+
+    __enable_irq();
 
     printf("\x1b[2J\x1b[;H");
     printf("Hello from the RDK4!\r\n");
