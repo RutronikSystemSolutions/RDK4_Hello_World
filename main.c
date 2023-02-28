@@ -87,7 +87,7 @@ int main(void)
     }
 
     /*Initialize LEDs*/
-    result = cyhal_gpio_init( USER_LED_GREEN, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, CYBSP_LED_STATE_OFF);
+    result = cyhal_gpio_init( USER_LED_GREEN, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, CYBSP_LED_STATE_ON);
     if (result != CY_RSLT_SUCCESS)
     {handle_error();}
     result = cyhal_gpio_init( USER_LED_RED, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, CYBSP_LED_STATE_OFF);
@@ -117,8 +117,12 @@ int main(void)
 
     __enable_irq();
 
+	/*Delay 1000 milliseconds*/
+	 Cy_SysLib_Delay(1000);
+	 cyhal_gpio_write(USER_LED_GREEN, CYBSP_LED_STATE_OFF);
+
     printf("\x1b[2J\x1b[;H");
-    printf("Hello from the RDK4!\r\n");
+    printf("Hello World, I am the RDK4!\r\n");
     printf("Press the USER BTN1 Button or any key to change the blinking LEDs\r\n");
 
     for (;;)
@@ -155,7 +159,7 @@ int main(void)
         }
 
     	/*Delay 500 milliseconds*/
-    	 Cy_SysLib_Delay(500);;
+    	 Cy_SysLib_Delay(500);
     }
 }
 
