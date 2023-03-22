@@ -4,7 +4,7 @@ Rutronik Development Kit 4 Programmable System-on-Chip CY8C4149AZE-S598 "Hello W
 
 This example is an introduction to the basic components of the board: LEDs, User Button 1 and KitProg3 UART for debug.
 
- <img src="images/rdk4_top.jpg" style="zoom:35%;" />
+ <img src="images/rdk4_top.jpg" style="zoom:25%;" />
 
 ## Requirements
 
