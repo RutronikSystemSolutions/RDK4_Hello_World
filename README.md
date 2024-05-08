@@ -11,6 +11,10 @@ This example is an introduction to the basic components of the board: LEDs, User
 - [ModusToolbox™ software](https://www.cypress.com/products/modustoolbox-software-environment) v3.1
 - The latest hardware release [RDK4 Rev2](https://github.com/RutronikSystemSolutions/RDK4_Hardware_Files).
 
+## Supported toolchains (make variable 'TOOLCHAIN')
+
+- GNU Arm&reg; Embedded Compiler v11.3.1 (`GCC_ARM`) - Default value of `TOOLCHAIN`
+
 ## Using the code example
 
 Create the project and open it using one of the following:
@@ -52,6 +56,10 @@ The firmware example uses KitProg3 Debug UART for debug output. A Blue LED or Re
 If you successfully have imported the example, the debug configurations are already prepared to use with the KitProg3 or MiniProg4. Open the ModusToolbox™ perspective and find the Quick Panel. Click on the desired debug launch configuration and wait for the programming to complete and the debugging process to start.
 
 <img src="images/hello_world_debug_start.png" style="zoom:100%;" />
+
+#### SBC Development Mode
+
+A special mode, called SBC Development Mode, is available during software development or debugging of the system. The watchdog counter is stopped and does not need to be triggered. This mode can be accessed by setting the TEST [**FO3**] pin to GND during SBC Init Mode.
 
 ## Legal Disclaimer
 
