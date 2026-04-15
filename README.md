@@ -2,18 +2,18 @@
 
 Rutronik Development Kit 4 Programmable System-on-Chip CY8C4149AZE-S598 "Hello World" Code Example. 
 
-This example is an introduction to the basic components of the board: LEDs, User Button 1 and KitProg3 UART for debugging.
+This example introduces the board's basic components: LEDs, User Button 1, and the KitProg3 UART for debugging.
 
  <img src="images/rdk4_top.jpg" style="zoom:20%;" />
 
 ## Requirements
 
-- [ModusToolbox™ software](https://www.cypress.com/products/modustoolbox-software-environment) 2025.4.0
+- [ModusToolbox™ software](https://www.cypress.com/products/modustoolbox-software-environment) v3.7
 - The latest hardware release [RDK4 Rev2](https://github.com/RutronikSystemSolutions/RDK4_Hardware_Files).
 
 ## Supported toolchains (make variable 'TOOLCHAIN')
 
-- GNU Arm&reg; Embedded Compiler v11.3.1 (`GCC_ARM`) - Default value of `TOOLCHAIN`
+- GNU Arm&reg; Embedded Compiler v14.2.1 (`GCC_ARM`) - Default value of `TOOLCHAIN`
 
 ## Using the code example
 
@@ -47,19 +47,19 @@ For more details, see the [Eclipse IDE for ModusToolbox&trade; software user gui
 
 ### Operation
 
-The firmware example uses KitProg3 Debug UART for debug output. A Blue LED or Red LED is selected to blink once per second as a button USER_BTN1 is pressed once. Also LEDs are changed if any key code is sent to the terminal. Use your preferred terminal software to track the debug output or simply load a ModusToolbox™ native "Terminal" tool.
+The firmware example uses KitProg3 Debug UART for debug output. A Blue LED or Red LED is selected to blink once per second as the button USER_BTN1 is pressed once. Also, LEDs change when any key code is sent to the terminal. Use your preferred terminal software to track the debug output or simply load a ModusToolbox™ native "Terminal" tool.
 
 <img src="images/debug_output_hello_world.png" style="zoom:100%;" />
 
 ### Debugging
 
-If you successfully have imported the example, the debug configurations are already prepared to use with the KitProg3 or MiniProg4. Open the ModusToolbox™ perspective and find the Quick Panel. Click on the desired debug launch configuration and wait for the programming to complete and the debugging process to start.
+If you have successfully imported the example, the debug configurations are already prepared to use with the KitProg3 or MiniProg4. Open the ModusToolbox™ perspective and find the Quick Panel. Click the desired debug launch configuration, then wait for programming to complete and debugging to start.
 
 <img src="images/hello_world_debug_start.png" style="zoom:100%;" />
 
 #### SBC Development Mode
 
-A special mode, called SBC Development Mode, is available during software development or debugging of the system. The watchdog counter is stopped and does not need to be triggered. This mode can be accessed by setting the TEST [**FO3**] pin to GND during SBC Init Mode.
+A special mode, called SBC Development Mode, is available for software development or system debugging. The watchdog counter is stopped and does not need to be triggered. This mode can be accessed by setting the TEST [**FO3**] pin to GND during SBC Init Mode.
 
 ## Legal Disclaimer
 
